@@ -1,3 +1,68 @@
-body{
-    background-color: black;
+body {
+  margin-top: 0px;
+  background-color: lightpink;
+  color: navy;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 50px;
+}
+.border {
+  border: 2px solid navy;
+  width: 40em;
+  height: 50em;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: antiquewhite;
+  padding-top: 10px;
+}
+.display {
+  border: 2px solid navy;
+  width: 500px;
+  height: 120px;
+  border-radius: 50px;
+  background-color: lightpink;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.function {
+  width: 500px;
+  height: 600px;
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+p {
+  padding-right: 10px;
+}
+
+button {
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
+  font-size: 50px;
+  border: 2px solid navy;
+  background-color: lightpink;
+  color: navy;
+}
+
+button:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px lightpink;
+  /* box-shadow: 7px 6px 28px 1px lightpink;  */
+  transform: translateY(1px);
+  transform: translateX(1px);
+  /* Lowering the shadow */
 }
