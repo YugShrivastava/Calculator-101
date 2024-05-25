@@ -38,6 +38,8 @@ const operations = document.querySelectorAll(".operations");
 const allClear = document.querySelector("#AC");
 const clear = document.querySelector("#Clear");
 const equals = document.querySelector("#Equals");
+const ansPara = document.createElement("p");
+
 let displayValue = "";
 
 numbers.forEach((numBtn) => {
@@ -53,6 +55,13 @@ operations.forEach((opBtn) => {
     if (displayValue !== "+" && displayValue !== "/" && displayValue !== "×" && displayValue !== "-" && displayValue !== "%" && displayValue !== "!") {
       displayValue = button.target.textContent;
       display.textContent += displayValue;
+      console.log(true);
+    }
+    else{
+        displayValue = button.target.textContent;   
+      let tempArray = display.textContent.split("");
+      tempArray.splice(tempArray.length-1, 1, displayValue)
+      display.textContent = tempArray.join("");  
     }
   });
 });
@@ -74,3 +83,4 @@ clear.addEventListener("click", (button) => {
 equals.addEventListener("click", (button) => {
 
 })
+
