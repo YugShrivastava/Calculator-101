@@ -31,3 +31,45 @@ function operate(num1, operator, num2) {
       console.log("Error in switch statement of operate");
   }
 }
+
+const display = document.querySelector("p");
+const numbers = document.querySelectorAll(".numbers");
+const operations = document.querySelectorAll(".operations");
+const allClear = document.querySelector("#AC");
+const clear = document.querySelector("#Clear");
+const equals = document.querySelector("#Equals");
+let displayValue = "";
+
+numbers.forEach((numBtn) => {
+  numBtn.addEventListener("click", (button) => {
+    displayValue = button.target.textContent;
+    display.textContent += displayValue;
+  });
+});
+
+operations.forEach((opBtn) => {
+  opBtn.addEventListener("click", (button) => {
+    if (displayValue !== "+" && displayValue !== "/" && displayValue !== "×" && displayValue !== "-" && displayValue !== "%" && displayValue !== "!") {
+      displayValue = button.target.textContent;
+      display.textContent += displayValue;
+    }
+  });
+});
+
+allClear.addEventListener("click", (button) => {
+  display.textContent = "0";
+  displayValue = "";
+});
+
+clear.addEventListener("click", (button) => {
+  if (display.textContent[1] !== undefined) {
+    let displayValueString = display.textContent.slice(0, -1);
+    display.textContent = displayValueString;
+    displayValue = display.textContent[display.textContent.length];
+    console.log(displayValueString);
+  }
+});
+
+equals.addEventListener("click", (button) => {
+    
+})
