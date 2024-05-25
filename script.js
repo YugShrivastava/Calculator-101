@@ -42,6 +42,7 @@ let displayValue = "";
 
 numbers.forEach((numBtn) => {
   numBtn.addEventListener("click", (button) => {
+    if (display.textContent == 0) display.textContent = "";
     displayValue = button.target.textContent;
     display.textContent += displayValue;
   });
@@ -62,14 +63,14 @@ allClear.addEventListener("click", (button) => {
 });
 
 clear.addEventListener("click", (button) => {
-  if (display.textContent[1] !== undefined) {
     let displayValueString = display.textContent.slice(0, -1);
     display.textContent = displayValueString;
     displayValue = display.textContent[display.textContent.length];
     console.log(displayValueString);
-  }
+
+    if (display.textContent[0] === undefined) display.textContent = "0";
 });
 
 equals.addEventListener("click", (button) => {
-    
+
 })
