@@ -5,10 +5,10 @@ function substract(num1 = 0, num2 = 0) {
   return num1 - num2;
 }
 function multiply(num1 = 1, num2 = 1) {
-  return num1 * num2;
+  return Math.round((num1 * num2) * 100) / 100;
 }
 function divide(num1 = 1, num2 = 1) {
-  return num1 / num2;
+  return Math.round((num1 / num2) * 100) / 100;
 }
 
 let firstNumber, secondNumber, operator;
@@ -197,3 +197,4 @@ equals.addEventListener("click", (equals) => {
   btnEqualsFlag = 0;
   equalsFlag = 1;
 });
+
