@@ -79,3 +79,18 @@ button:active {
 margin-left: 25px;
   /* margin-right: 280px; */
 }
+.operations:hover{
+  background-color: navy;
+  color: antiquewhite;
+}
+#AC:hover,
+#Clear:hover{
+  background-color: red;
+  color: antiquewhite;
+}
+#Equals:hover{
+  background-color: lightgreen;
+}
+.numbers:hover{
+  border:2px solid lightpink;
+}

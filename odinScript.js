@@ -5,7 +5,7 @@ function substract(num1 = 0, num2 = 0) {
   return num1 - num2;
 }
 function multiply(num1 = 1, num2 = 1) {
-  return Math.round((num1 * num2) * 100) / 100;
+  return Math.round(num1 * num2 * 100) / 100;
 }
 function divide(num1 = 1, num2 = 1) {
   return Math.round((num1 / num2) * 100) / 100;
@@ -198,3 +198,6 @@ equals.addEventListener("click", (equals) => {
   equalsFlag = 1;
 });
 
+display.addEventListener("keydown", (number) => {
+  console.log(`Key = ${number.key}, Code = ${number.code}`)
+})
